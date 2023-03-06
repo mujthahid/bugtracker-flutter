@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: MaterialButton(onPressed:((){
         Navigator.push(context, MaterialPageRoute(builder: ((context) =>   const BugForm(addBug: true,))));
       }), 
-      child: const CircleAvatar(radius: 35,child: Text('+',style: TextStyle(
+      child: CircleAvatar(backgroundColor: Theme.of(context).primaryColor,foregroundColor: Theme.of(context).primaryColorLight, radius: 35,child: const Text('+',style: TextStyle(
         fontSize: 25,
         fontWeight: FontWeight.bold
       ),
@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                       },
                       isThreeLine: true,
                       leading: Text(value.data[index]['title'],style:const TextStyle(fontWeight:FontWeight.bold,fontSize:16),),
-                      title: Text(value.data[index]['description'],softWrap: true,),
+                      title: Text(value.data[index]['description'],softWrap: true,overflow: TextOverflow.ellipsis,),
                       subtitle: Text(value.data[index]["due_date"]??""),
 
                       trailing:  IconButton(onPressed: (){

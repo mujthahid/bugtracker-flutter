@@ -22,27 +22,29 @@ class BugScreen extends StatelessWidget {
     ],
     ),
       
-    body: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              
-             
-              MyTextField(bugInformation: bugInformation,textContent: "Title : ${bugInformation?['title']}",),
-              
-              MyTextField(bugInformation: bugInformation, textContent: "Description : ${bugInformation?['description']}"),
-              
-              MyTextField(bugInformation: bugInformation, textContent: "Reporter : ${bugInformation?['reporter']??""}"),
-              
-              MyTextField(bugInformation: bugInformation, textContent: "Due Date : ${bugInformation?['due_date']??""}"),
-             
-              MyTextField(bugInformation: bugInformation, textContent: "Project : ${bugInformation?['project']??""}"),
-             
-              MyTextField(bugInformation: bugInformation,textContent:"File URL : ${bugInformation?['fileUrl']??""}"),
-              
-              
-            ],
-          ),
+    body: SingleChildScrollView(
+      child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                
+               
+                MyTextField(bugInformation: bugInformation,textContent: "Title : ${bugInformation?['title']}",),
+                
+                MyTextField(bugInformation: bugInformation, textContent: "Description : ${bugInformation?['description']}"),
+                
+                MyTextField(bugInformation: bugInformation, textContent: "Reporter : ${bugInformation?['reporter']??""}"),
+                
+                MyTextField(bugInformation: bugInformation, textContent: "Due Date : ${bugInformation?['due_date']??""}"),
+               
+                MyTextField(bugInformation: bugInformation, textContent: "Project : ${bugInformation?['project']??""}"),
+               
+                MyTextField(bugInformation: bugInformation,textContent:"File URL : ${bugInformation?['fileUrl']??""}"),
+                
+                
+              ],
+            ),
+    ),
       );
     
   }
